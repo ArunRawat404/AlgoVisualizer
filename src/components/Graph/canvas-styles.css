@@ -1,0 +1,47 @@
+:root{
+    --plain-text-color : #333;
+    --canvas-width: var(--box-width);
+    --canvas-height : calc(var(--box-height) - var(--status-bar-height));
+    --canvas-bg-color : #23120B;
+    --outer-container-height : 500px;
+    --outer-container-width : 900px;
+    --cell-size : 20px;
+}
+
+.canvas{
+    box-sizing: border-box;
+    background-color: var(--canvas-bg-color);
+    width: var(--canvas-width);
+    height : var(--canvas-height);
+    line-height: var(--canvas-height);
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+
+.row {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width : 100%;
+    height: var(--cell-size);
+    flex-grow: 1;
+    display : flex;
+    flex-direction: row;
+    /* border: 1px solid red; */
+}
+
+.cell{
+    box-sizing: border-box;
+    display : inline-block;
+    margin : 0;
+    padding : 0;
+    border : 1px solid #ddd;
+    flex-grow: 1;
+}
+
+.cell:hover{
+    z-index : 1;
+    box-shadow: 0 0 5px red;
+}

@@ -1,0 +1,55 @@
+:root{
+    --textbox-container-height : 50px;
+    --textbox-container-width : 100%;
+    --textbox-bg-color : #393E46;
+}
+
+.textbox-container{
+    box-sizing: border-box;
+    color : white;
+    font-size: 20px;
+    line-height: 1.2;
+    max-width: var(--textbox-container-width);
+    min-width: var(--textbox-container-width);
+    display : flex;
+    flex-direction: row;
+}
+
+.textbox-button{
+    font-size: 20px;
+    height : var(--textbox-container-height);
+    width : 80px;
+    background-color: #333;
+    text-align: center;
+    color : white;
+    box-shadow : 0 0 0 transparent;
+    border : 0 solid transparent;
+    border-radius: 5px;
+}
+
+.textbox-button:hover{
+    box-shadow : 0 0 5px white;
+    cursor : pointer;
+}
+
+.textbox{
+    box-sizing: border-box;
+    padding : 0 10px;
+    color : white;
+    font-size: 20px;
+    line-height: 1.2;
+    min-height: var(--textbox-container-height);
+    max-height: var(--textbox-container-height);
+    background-color: var(--textbox-bg-color);
+    flex-grow : 1;    
+    border : none;
+}
+
+.textbox:active{
+    outline : none;
+}
+
+.textbox:focus{
+    outline : none;
+    box-shadow : 0 0 4px yellow;
+}
